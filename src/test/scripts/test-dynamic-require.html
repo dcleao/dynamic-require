@@ -1,0 +1,24 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <title></title>
+    <script type="text/javascript" src="../../main/scripts/external/common-ui/require.js"></script>
+    <script type="text/javascript">
+        var req = pen.require.config({
+            baseUrl: "../../main/scripts/external",
+            dynamicModules: {
+                "common-ui/util/PentahoSpinner" : "testModule",
+                "common-ui/util/BusyIndicator" : "testModule"
+            },
+            paths: {"dynModule" : "../dynamic/dynModule"}
+        });
+        pen.require(["dynModule!testModule"], function(deps){
+            console.log("dynamic module dependencies: " + deps);
+        });
+    </script>
+
+</head>
+<body>
+
+</body>
+</html>
