@@ -15,11 +15,14 @@
       </includes>
     </fileSet>
     <fileSet>
-      <directory>${project.build.directory}/modules</directory>
+      <directory>${project.build.scriptSourceDirectory}</directory>
       <outputDirectory>resources/web</outputDirectory>
       <includes>
         <include>**/*</include>
       </includes>
+      <excludes>
+        <exclude>external/</exclude>
+      </excludes>
     </fileSet>
   </fileSets>
 </assembly>
